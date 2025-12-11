@@ -44,7 +44,7 @@ const FaralContact = () => {
     {
       icon: MapPin,
       title: "Location",
-      value: "Pune, Maharashtra",
+      value: "Kandivali (East), Mumbai",
       link: "#",
     },
   ];
