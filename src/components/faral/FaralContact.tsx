@@ -26,20 +26,20 @@ const FaralContact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      value: "+91 98765 43210",
-      link: "tel:+919876543210",
+      value: "+91 80972 83457",
+      link: "tel:+918097283457",
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      value: "+91 98765 43210",
-      link: "https://wa.me/919876543210?text=Hi! I'm interested in ordering Diwali Faral",
+      value: "+91 80972 83457",
+      link: "https://wa.me/918097283457?text=Hi! I'm interested in ordering Diwali Faral",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "komal.faral@gmail.com",
-      link: "mailto:komal.faral@gmail.com",
+      value: "komal@dolas.com",
+      link: "mailto:komal@dolas.com",
     },
     {
       icon: MapPin,
@@ -98,7 +98,7 @@ const FaralContact = () => {
                     Fastest way to place your order or ask questions
                   </p>
                   <a
-                    href="https://wa.me/919876543210?text=Hi! I'm interested in ordering Diwali Faral for 2026"
+                    href="https://wa.me/918097283457?text=Hi! I'm interested in ordering Diwali Faral for 2026"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 bg-green-500 text-white rounded-full text-sm font-medium hover:bg-green-600 transition-colors"
