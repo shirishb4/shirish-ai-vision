@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Poppins', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Tiro Devanagari Hindi', 'serif'],
+        body: ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,18 +51,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        shop: {
-          coral: "hsl(var(--shop-coral))",
-          peach: "hsl(var(--shop-peach))",
-          cream: "hsl(var(--shop-cream))",
-          dark: "hsl(var(--shop-dark))",
-          gray: "hsl(var(--shop-gray))",
+        diwali: {
+          saffron: "hsl(var(--diwali-saffron))",
+          marigold: "hsl(var(--diwali-marigold))",
+          crimson: "hsl(var(--diwali-crimson))",
+          cream: "hsl(var(--diwali-cream))",
+          gold: "hsl(var(--diwali-gold))",
+          brown: "hsl(var(--diwali-brown))",
         },
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
-        'gradient-section': 'var(--gradient-section)',
-        'gradient-card': 'var(--gradient-card)',
+        'gradient-festive': 'var(--gradient-festive)',
+        'gradient-warm': 'var(--gradient-warm)',
       },
       borderRadius: {
         lg: "var(--radius)",
