@@ -9,7 +9,7 @@ const HeroBanner = () => {
           {/* Content */}
           <div className="space-y-6 animate-slide-up">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-              New Collection 2024
+              New Collection 2025
             </span>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Discover Your{" "}
@@ -60,7 +60,7 @@ const HeroBanner = () => {
             {/* Floating badge */}
             <div className="absolute bottom-10 left-0 bg-card p-4 rounded-2xl shadow-lg animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <p className="text-sm text-muted-foreground">Starting from</p>
-              <p className="font-heading text-2xl font-bold text-primary">$29.99</p>
+              <p className="font-heading text-2xl font-bold text-primary">₹2,499</p>
             </div>
           </div>
         </div>

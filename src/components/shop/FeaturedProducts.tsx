@@ -5,8 +5,8 @@ const products = [
   {
     id: 1,
     name: "Premium Wireless Headphones",
-    price: 299.99,
-    originalPrice: 399.99,
+    price: 24999,
+    originalPrice: 32999,
     rating: 4.8,
     reviews: 128,
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
@@ -15,7 +15,7 @@ const products = [
   {
     id: 2,
     name: "Elegant Summer Dress",
-    price: 89.99,
+    price: 7499,
     originalPrice: null,
     rating: 4.6,
     reviews: 89,
@@ -25,8 +25,8 @@ const products = [
   {
     id: 3,
     name: "Classic Leather Watch",
-    price: 199.99,
-    originalPrice: 249.99,
+    price: 16999,
+    originalPrice: 20999,
     rating: 4.9,
     reviews: 256,
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
@@ -35,7 +35,7 @@ const products = [
   {
     id: 4,
     name: "Designer Sunglasses",
-    price: 159.99,
+    price: 13499,
     originalPrice: null,
     rating: 4.7,
     reviews: 74,
@@ -45,8 +45,8 @@ const products = [
   {
     id: 5,
     name: "Minimalist Backpack",
-    price: 79.99,
-    originalPrice: 99.99,
+    price: 6499,
+    originalPrice: 8499,
     rating: 4.5,
     reviews: 142,
     image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
@@ -55,7 +55,7 @@ const products = [
   {
     id: 6,
     name: "Sport Running Shoes",
-    price: 129.99,
+    price: 10999,
     originalPrice: null,
     rating: 4.8,
     reviews: 198,
@@ -65,8 +65,8 @@ const products = [
   {
     id: 7,
     name: "Casual Sneakers",
-    price: 89.99,
-    originalPrice: 119.99,
+    price: 7499,
+    originalPrice: 9999,
     rating: 4.4,
     reviews: 67,
     image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop",
@@ -75,8 +75,8 @@ const products = [
   {
     id: 8,
     name: "Smart Fitness Band",
-    price: 49.99,
-    originalPrice: 69.99,
+    price: 3999,
+    originalPrice: 5999,
     rating: 4.3,
     reviews: 312,
     image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop",
@@ -163,11 +163,11 @@ const FeaturedProducts = () => {
                 {/* Price */}
                 <div className="flex items-center gap-2">
                   <span className="font-heading font-bold text-lg text-primary">
-                    ${product.price}
+                    ₹{product.price.toLocaleString('en-IN')}
                   </span>
                   {product.originalPrice && (
                     <span className="text-sm text-muted-foreground line-through">
-                      ${product.originalPrice}
+                      ₹{product.originalPrice.toLocaleString('en-IN')}
                     </span>
                   )}
                 </div>
