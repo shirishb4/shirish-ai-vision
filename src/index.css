@@ -1,194 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Shopping Portal Design System */
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 13%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
-
-    /* Coral/Salmon - Primary Brand Color */
-    --primary: 16 85% 65%;
-    --primary-foreground: 0 0% 100%;
-
-    /* Light Pink/Peach - Secondary */
-    --secondary: 20 100% 95%;
-    --secondary-foreground: 0 0% 13%;
-
-    /* Muted variations */
-    --muted: 30 20% 96%;
-    --muted-foreground: 0 0% 45%;
-
-    /* Accent - Warm Orange */
-    --accent: 25 95% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 30 20% 90%;
-    --input: 30 20% 90%;
-    --ring: 16 85% 65%;
-
+    --background: 40 33% 97%;
+    --foreground: 15 25% 15%;
+    --card: 40 40% 95%;
+    --card-foreground: 15 25% 15%;
+    --popover: 40 40% 95%;
+    --popover-foreground: 15 25% 15%;
+    --primary: 25 90% 50%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 45 95% 55%;
+    --secondary-foreground: 15 25% 15%;
+    --muted: 35 30% 90%;
+    --muted-foreground: 15 20% 40%;
+    --accent: 0 75% 45%;
+    --accent-foreground: 40 33% 97%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 33% 97%;
+    --border: 35 30% 85%;
+    --input: 35 30% 85%;
+    --ring: 25 90% 50%;
     --radius: 0.75rem;
-
-    /* Shopping specific colors */
-    --shop-coral: 16 85% 65%;
-    --shop-peach: 20 100% 95%;
-    --shop-cream: 40 60% 97%;
-    --shop-dark: 0 0% 13%;
-    --shop-gray: 0 0% 60%;
-
-    /* Gradient definitions */
-    --gradient-hero: linear-gradient(135deg, hsl(20, 100%, 95%) 0%, hsl(40, 60%, 97%) 50%, hsl(0, 0%, 100%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(40, 60%, 97%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(30, 20%, 98%) 100%);
-    
-    /* Shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(0, 0%, 13% / 0.1);
-    --shadow-hover: 0 20px 60px -10px hsl(0, 0%, 13% / 0.15);
-    
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 16 85% 65%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 25 95% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 16 85% 65%;
+    --diwali-saffron: 25 90% 50%;
+    --diwali-marigold: 45 95% 55%;
+    --diwali-crimson: 0 75% 45%;
+    --diwali-cream: 40 33% 97%;
+    --diwali-gold: 43 80% 55%;
+    --diwali-brown: 15 25% 25%;
+    --gradient-hero: linear-gradient(135deg, hsl(25 90% 50% / 0.1), hsl(45 95% 55% / 0.1), hsl(0 75% 45% / 0.05));
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; font-family: 'Poppins', sans-serif; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Tiro Devanagari Hindi', serif; }
+}
 
-  body {
-    @apply bg-background text-foreground font-body;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-  }
+@layer components {
+  .section-padding { @apply py-16 md:py-24; }
+  .container-diwali { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+  .card-festive { @apply bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1; }
+  .card-product { @apply bg-card rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-2; }
+  .btn-festive { @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl; }
+  .btn-festive-outline { @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-all duration-300; }
+  .rangoli-pattern { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .diya-glow { box-shadow: 0 0 30px hsl(var(--diwali-gold) / 0.4), 0 0 60px hsl(var(--diwali-saffron) / 0.2); }
+  .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+  .animate-slide-up { animation: slideUp 0.8s ease-out forwards; }
+  .animate-float { animation: float 3s ease-in-out infinite; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 }
 
 @layer utilities {
-  .section-padding {
-    @apply py-16 md:py-24;
-  }
-
-  .container-shop {
-    @apply container mx-auto px-4 md:px-8 lg:px-16;
-  }
-
-  .card-product {
-    @apply bg-card rounded-2xl shadow-[var(--shadow-elegant)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] hover:-translate-y-2;
-  }
-
-  .btn-shop {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
-  }
-
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-
-/* n8n Chat customization */
-#n8n-chat {
-  --chat--color-primary: hsl(16, 85%, 65%);
-  --chat--color-primary-shade-50: hsl(16, 85%, 60%);
-  --chat--color-primary-shade-100: hsl(16, 85%, 55%);
-  --chat--color-secondary: hsl(20, 100%, 95%);
-  --chat--color-secondary-shade-50: hsl(20, 100%, 90%);
-  --chat--color-white: #ffffff;
-  --chat--color-light: hsl(40, 60%, 97%);
-  --chat--color-light-shade-50: hsl(30, 20%, 96%);
-  --chat--color-medium: hsl(0, 0%, 60%);
-  --chat--color-dark: hsl(0, 0%, 13%);
-  --chat--color-disabled: #9e9e9e;
-  --chat--color-typing: #404040;
-  --chat--spacing: 1rem;
-  --chat--border-radius: 0.75rem;
-  --chat--transition-duration: 0.15s;
-  --chat--window--width: 400px;
-  --chat--window--height: 600px;
-  --chat--header-height: auto;
-  --chat--header--padding: var(--chat--spacing);
-  --chat--header--background: var(--chat--color-dark);
-  --chat--header--color: var(--chat--color-white);
-  --chat--textarea--height: 50px;
-  --chat--message--font-size: 0.875rem;
-  --chat--message--padding: var(--chat--spacing);
-  --chat--message--border-radius: var(--chat--border-radius);
-  --chat--message-line-height: 1.5;
-  --chat--message--bot--background: var(--chat--color-white);
-  --chat--message--bot--color: var(--chat--color-dark);
-  --chat--message--user--background: var(--chat--color-primary);
-  --chat--message--user--color: var(--chat--color-white);
-  --chat--message--pre--background: rgba(0, 0, 0, 0.05);
-  --chat--toggle--background: var(--chat--color-primary);
-  --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
-  --chat--toggle--active--background: var(--chat--color-primary-shade-100);
-  --chat--toggle--color: var(--chat--color-white);
-  --chat--toggle--size: 64px;
+  .bg-gradient-festive { background: linear-gradient(135deg, hsl(var(--diwali-saffron) / 0.1), hsl(var(--diwali-marigold) / 0.1)); }
+  .bg-gradient-warm { background: linear-gradient(135deg, hsl(var(--diwali-saffron) / 0.15), hsl(var(--diwali-gold) / 0.1)); }
 }
