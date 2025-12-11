@@ -51,6 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        shop: {
+          coral: "hsl(var(--shop-coral))",
+          peach: "hsl(var(--shop-peach))",
+          cream: "hsl(var(--shop-cream))",
+          dark: "hsl(var(--shop-dark))",
+          gray: "hsl(var(--shop-gray))",
+        },
       },
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
@@ -64,20 +71,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

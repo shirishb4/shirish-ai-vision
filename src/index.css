@@ -2,87 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Shopping Portal Design System */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 65% 11%;
+    --foreground: 0 0% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 65% 11%;
+    --card-foreground: 0 0% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 65% 11%;
+    --popover-foreground: 0 0% 13%;
 
-    /* Deep Navy Blue - Primary Brand Color */
-    --primary: 210 65% 11%;
+    /* Coral/Salmon - Primary Brand Color */
+    --primary: 16 85% 65%;
     --primary-foreground: 0 0% 100%;
 
-    /* Silver Grey - Secondary */
-    --secondary: 220 14% 81%;
-    --secondary-foreground: 210 65% 11%;
+    /* Light Pink/Peach - Secondary */
+    --secondary: 20 100% 95%;
+    --secondary-foreground: 0 0% 13%;
 
     /* Muted variations */
-    --muted: 220 14% 95%;
-    --muted-foreground: 220 14% 45%;
+    --muted: 30 20% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Intelligent Teal - Accent */
-    --accent: 186 100% 33%;
+    /* Accent - Warm Orange */
+    --accent: 25 95% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 88%;
-    --input: 220 14% 88%;
-    --ring: 186 100% 33%;
+    --border: 30 20% 90%;
+    --input: 30 20% 90%;
+    --ring: 16 85% 65%;
 
     --radius: 0.75rem;
 
+    /* Shopping specific colors */
+    --shop-coral: 16 85% 65%;
+    --shop-peach: 20 100% 95%;
+    --shop-cream: 40 60% 97%;
+    --shop-dark: 0 0% 13%;
+    --shop-gray: 0 0% 60%;
+
     /* Gradient definitions */
-    --gradient-hero: linear-gradient(135deg, hsl(210, 65%, 11%) 0%, hsl(210, 55%, 18%) 50%, hsl(186, 100%, 33%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(220, 14%, 98%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(220, 14%, 97%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(20, 100%, 95%) 0%, hsl(40, 60%, 97%) 50%, hsl(0, 0%, 100%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(40, 60%, 97%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(30, 20%, 98%) 100%);
     
     /* Shadows */
-    --shadow-elegant: 0 10px 40px -10px hsl(210, 65%, 11% / 0.15);
-    --shadow-glow: 0 0 30px hsl(186, 100%, 33% / 0.2);
+    --shadow-elegant: 0 10px 40px -10px hsl(0, 0%, 13% / 0.1);
+    --shadow-hover: 0 20px 60px -10px hsl(0, 0%, 13% / 0.15);
     
     /* Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 210 65% 11%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 60% 15%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 60% 15%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 210 65% 11%;
+    --primary: 16 85% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 55% 20%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 55% 20%;
-    --muted-foreground: 220 14% 70%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 186 100% 33%;
+    --accent: 25 95% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 55% 20%;
-    --input: 210 55% 20%;
-    --ring: 186 100% 33%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 16 85% 65%;
   }
 }
 
@@ -101,47 +106,89 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
-  }
-
   .section-padding {
-    @apply py-20 md:py-32;
+    @apply py-16 md:py-24;
   }
 
-  .container-custom {
-    @apply container mx-auto px-6 md:px-12 lg:px-20;
+  .container-shop {
+    @apply container mx-auto px-4 md:px-8 lg:px-16;
   }
 
-  .card-elegant {
-    @apply bg-white rounded-2xl shadow-[0_10px_40px_-10px_hsl(210,65%,11%,0.15)] transition-all duration-300 hover:shadow-[0_20px_60px_-10px_hsl(210,65%,11%,0.2)] hover:-translate-y-1;
+  .card-product {
+    @apply bg-card rounded-2xl shadow-[var(--shadow-elegant)] transition-all duration-300 hover:shadow-[var(--shadow-hover)] hover:-translate-y-2;
   }
 
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+  .btn-shop {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300;
   }
 
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
-  @keyframes fadeInUp {
+  @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* n8n Chat customization */
+#n8n-chat {
+  --chat--color-primary: hsl(16, 85%, 65%);
+  --chat--color-primary-shade-50: hsl(16, 85%, 60%);
+  --chat--color-primary-shade-100: hsl(16, 85%, 55%);
+  --chat--color-secondary: hsl(20, 100%, 95%);
+  --chat--color-secondary-shade-50: hsl(20, 100%, 90%);
+  --chat--color-white: #ffffff;
+  --chat--color-light: hsl(40, 60%, 97%);
+  --chat--color-light-shade-50: hsl(30, 20%, 96%);
+  --chat--color-medium: hsl(0, 0%, 60%);
+  --chat--color-dark: hsl(0, 0%, 13%);
+  --chat--color-disabled: #9e9e9e;
+  --chat--color-typing: #404040;
+  --chat--spacing: 1rem;
+  --chat--border-radius: 0.75rem;
+  --chat--transition-duration: 0.15s;
+  --chat--window--width: 400px;
+  --chat--window--height: 600px;
+  --chat--header-height: auto;
+  --chat--header--padding: var(--chat--spacing);
+  --chat--header--background: var(--chat--color-dark);
+  --chat--header--color: var(--chat--color-white);
+  --chat--textarea--height: 50px;
+  --chat--message--font-size: 0.875rem;
+  --chat--message--padding: var(--chat--spacing);
+  --chat--message--border-radius: var(--chat--border-radius);
+  --chat--message-line-height: 1.5;
+  --chat--message--bot--background: var(--chat--color-white);
+  --chat--message--bot--color: var(--chat--color-dark);
+  --chat--message--user--background: var(--chat--color-primary);
+  --chat--message--user--color: var(--chat--color-white);
+  --chat--message--pre--background: rgba(0, 0, 0, 0.05);
+  --chat--toggle--background: var(--chat--color-primary);
+  --chat--toggle--hover--background: var(--chat--color-primary-shade-50);
+  --chat--toggle--active--background: var(--chat--color-primary-shade-100);
+  --chat--toggle--color: var(--chat--color-white);
+  --chat--toggle--size: 64px;
 }
